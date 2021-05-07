@@ -13157,8 +13157,17 @@ div#notebook {
 <h2 id="Skotsk&#225;-kniha">Skotsk&#225; kniha<a class="anchor-link" href="#Skotsk&#225;-kniha">&#182;</a></h2><p>Do Skotské knihy (polsky Ksiega Szkocka), jak začnou sešitu schovaném u personálu kavárny říkat, zapíše první problém Stefan Banach 17. července 1935 a týká se Banachových prostorů (jak jim dnes říkáme). Poslední 193. problém zapsal Hugo Steinhaus 31. května 1941 a je jím pravděpodobnostní úloha inspirovaná Banachem a jeho zvykem kouřit jednu cigaretu za druhou. Dnes je problém znám jako "Banach matchbox problem".</p>
 <p>Většinu problémů zapisuje trojice Banach, Ulam, Mazur, ale objevují se i známá jména jako Fréchet, Schauder, Sobolew, nebo von Neumann kteří jsou ve Lvově na návštěve a samozřejmě i spousta dalších kolegů z obou Lvovských vysokých škol.</p>
 <p>Ve Skotské knize je celkem 193 problémů. Některé jsou dodnes nevyřešené a matematici se jimi dále zabývají. Podle vydání Skotské knihy z roku 2015 je stále nevyřešeno až 43 problémů. Problémy v knize nemají žádné speciální uspořádání a zapisovaly se do ní jak přicházely osazenstvu kavárny na mysl.</p>
-<p>Ve Skotské knize jsou popsány problémy z teorie grup, topologie, teorie míry, teorie množin nebo pravděpodobnosti. Asi nejvíce je ale problémů týkajících se v Polsku a speciálně ve Lvově vznikající a rozvíjející se funkcionální analýzy a funkčních prostorů. Celou skupinu zajímaly jak jim dnes říkáme Banachovy prostory (sám Banach je nazývá prostory typu B). Ty popisují prostory, které jsou si velmi podobné vlastnostmi, ale už mnohem méně jsou si podobné svými prvky. Banachovým prostorem jsou tak např. reálná čísla $\mathbb{R}$, prostor všech konvergentních řad $l^2$, prostor všech Lebegueovsky integrovatelných funkcí $L^2$, nebo také prostor všech slabých řešení Dirichletovy úlohy, tedy Sobolevovovy prostory $W_0^{1,2}$. Naší skupinu zajímají speciálně ty problémy, které pracují s kompaktnostní, nebo spíše nekompaktností. Mnoho problémů ve Skotské knize se zabývá také aproximacemi, redukcí něčeho nekonečného na konečnou strukturu.</p>
-<p>Na ukázku si uveďme tři problémy ze Skotské knihy. Prvním je hned první zápis, provedený Banachem 17. července 1935.</p>
+<p>Ve Skotské knize jsou popsány problémy z teorie grup, topologie, teorie míry, teorie množin nebo pravděpodobnosti. Asi nejvíce je ale problémů týkajících se v Polsku a speciálně ve Lvově vznikající a rozvíjející se funkcionální analýzy a funkčních prostorů. Celou skupinu zajímaly jak jim dnes říkáme Banachovy prostory (sám Banach je nazývá prostory typu B). Ty popisují prostory, které jsou si velmi podobné vlastnostmi, ale už mnohem méně jsou si podobné svými prvky. Banachovým prostorem jsou tak např. reálná čísla $\mathbb{R}$, prostor všech konvergentních řad $l^2$, prostor všech Lebegueovsky integrovatelných funkcí $L^2$, nebo také prostor všech slabých řešení Dirichletovy úlohy, tedy Sobolevovovy prostory $W_0^{1,2}$.</p>
+<p>Abychom si dokázali definovat Banachovy prostory, potřebujeme nejprve definici cauchyovské posloupnosti.</p>
+<p><em>Definice</em>: V metrickém prostoru $X$ s metrikou $d$ je posloupnost $(x_1, x_2, \ldots)$ <strong>cauchyovská</strong>, pokud pro každou libovolně malou vzdálenost platí, že od jistého bodu jsou všechny členy posloupnosti k sobě blíže než je tato vzdálenost. 
+\begin{equation}
+\forall \epsilon &gt; 0 \; \exists! n_0 \in \mathbb{N} \; \forall n,m \in \mathbb{N}: n &gt; n_0 \land m &gt; n_0 \implies d(x_n, x_m) &lt; \epsilon
+\end{equation}</p>
+<p>Definice Banachova prostoru je pak následující.</p>
+<p><em>Definice</em>: <strong>Banachovým prostorem</strong> rozumíme úplný normovaný lineární prostor. Tedy takový lineární prostor $X$ nad tělesem reálných nebo komplexních čísel s normou $\Vert \cdot \Vert$, ve kterém je každá cauchyovská posloupnost konvergentní, tedy v indukované metrice $d(x_n, x_m) = \Vert x_n - x_m \Vert$ má limitu.</p>
+<p>Naší skupinu zajímají speciálně ty problémy, které pracují s kompaktnostní, nebo spíše nekompaktností. Proto si uveďme ještě třetí definici.</p>
+<p><em>Definice</em>: Množina $\mathcal{M}$ metrického prostoru $X$ se nazývá <strong>kompaktní</strong>, pokud z každé posloupnosti $\{ x_n \}_{n=1}^{\infty},\, x_n \in X$ lze vybrat konvergentní podposloupnost.</p>
+<p>Mnoho problémů ve Skotské knize se zabývá také aproximacemi, redukcí něčeho nekonečného na konečnou strukturu. Na ukázku si uveďme tři problémy ze Skotské knihy. Prvním je hned první zápis, provedený Banachem 17. července 1935.</p>
 
 </div>
 </div>
@@ -13167,7 +13176,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Probl&#233;m-1:-Banach">Probl&#233;m 1: Banach<a class="anchor-link" href="#Probl&#233;m-1:-Banach">&#182;</a></h3><p>(a) Jestliže bude metrický prostor [respektive prostor typu (B)] metrizován tak, že se stane úplným a kompaktním, budou všechny posloupnosti konvergující v původním prostoru konvergovat i v nové metrice?</p>
-<p>(b) Můž být metrizován například prostor $[c_0]$?</p>
+<p>(b) Můž být metrizován například prostor $[c_0]$ (prostor všech posloupností konvergujících k $0$) ?</p>
 <p><strong>Komentář:</strong>
 Na otázka (a) neexistuje dodnes uspokojivá odpověd. Odpověd na otázku (b) je ano.</p>
 <p><img src="problem_1.jpg" alt="Problém 1: Banach"></p>
@@ -13232,7 +13241,8 @@ Na obě otázky v části (b) existuje řešení už delší dobu. První část
 <h4 id="Literatura">Literatura<a class="anchor-link" href="#Literatura">&#182;</a></h4><p>(1) Mathematics from the Scottish Café, with Selected Problems from the New Scottish Book, second edition Edited by R. Daniel Mauldin: BASEL: BIRKHÄUSER, 2015, XVIII+322 PP.</p>
 <p>(2) Wikipedia contributors. (2021, April 4). Scottish Book. In Wikipedia, The Free Encyclopedia. Retrieved 18:50, May 5, 2021, from <a href="https://en.wikipedia.org/w/index.php?title=Scottish_Book&amp;oldid=1016001127">https://en.wikipedia.org/w/index.php?title=Scottish_Book&amp;oldid=1016001127</a></p>
 <p>(3) Maths, Madness and the Manhattan Project: the Eccentric Lives of Steinhaus, Banach and Ulam: Ania Legierska, (text based on Mariusz Urbanek's Genialni. Lwowska Szkoła Matematyczna) translator: MJ 02/12/2014: <a href="https://culture.pl/en/article/maths-madness-and-the-manhattan-project-the-eccentric-lives-of-steinhaus-banach-and-ulam">https://culture.pl/en/article/maths-madness-and-the-manhattan-project-the-eccentric-lives-of-steinhaus-banach-and-ulam</a></p>
-<p>(4) Uniwersytet Wroclawski, Nowa Ksiega Szkocka : <a href="http://www.wmi.uni.wroc.pl/pl/New_Scottish_Book">http://www.wmi.uni.wroc.pl/pl/New_Scottish_Book</a></p>
+<p>(4) Wortal Stefana Banacha, Archiwalia, Emilia Jakimowicz a Adam Miranowicz, 2012  : <a href="http://kielich.amu.edu.pl/Stefan_Banach/archiwalia.html">http://kielich.amu.edu.pl/Stefan_Banach/archiwalia.html</a></p>
+<p>(5) Uniwersytet Wroclawski, Nowa Ksiega Szkocka : <a href="http://www.wmi.uni.wroc.pl/pl/New_Scottish_Book">http://www.wmi.uni.wroc.pl/pl/New_Scottish_Book</a></p>
 
 </div>
 </div>
